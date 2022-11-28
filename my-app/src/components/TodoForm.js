@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { addTodo } from "../store/reducers/todosSlice";
 import { useDispatch } from "react-redux";
+import "./TodoForm.css"
 
 const TodoForm = () => {
   const [title, setTitle] = useState("");
@@ -20,7 +21,7 @@ const TodoForm = () => {
     <div>
       <form onSubmit={addSingleTodo}>
         <input type="text" value={title} onChange={changeTitle} />
-        <input type="submit" value="Add" />
+        <input className="add-button" type="submit" value="Add" />
       </form>
     </div>
   );
